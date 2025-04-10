@@ -4,11 +4,11 @@
 # LOOK AND FEEL
 
 cs_base_color = "#A31F34"  # the base color
-cs_header = '6.SAMP'  # the upper-left corner
+cs_header = 'Number Sense'  # the upper-left corner
 cs_icon_url = 'COURSE/favicon_local.gif'  # the favicon, if any
 # the 'header' text for the page
-cs_long_name = cs_content_header = "Sample Course"
-cs_title = 'Sample Course - CAT-SOOP'  # the browser's title bar
+cs_long_name = cs_content_header = "Number Sense"
+cs_title = 'Number Sense'  # the browser's title bar
 
 # don't try to parse markdown inside of these tags
 cs_markdown_ignore_tags = ('script', 'svg', 'textarea')
@@ -23,8 +23,18 @@ cs_top_menu = [
                                 {'text': 'Structure', 'link': 'COURSE/structure'},
                                 {'text': 'Markdown', 'link': 'COURSE/markdown'},
                                 {'text': 'Questions', 'link': 'COURSE/questions'},
+
                               ]},
-#    {'text': 'Sample Menu', 'link': [
+    {'text': 'Course', 'link': [
+                                {'text': 'Chapter 1', 'link': 'COURSE/chapter_1'}
+                                ]},
+    {'text': 'Practice', 'link': [
+                                {'text': 'Practice', 'link': 'COURSE/practice'}
+                                ]},
+    {'text': 'Resources', 'link':[
+                                {'text': 'Resources', 'link': 'COURSE/resources'}
+    ]}
+#    {'text': 'Sample Menu', 'link': [ssss
 #                                     {'link': 'COURSE/calendar', 'text': 'Calendar and Handouts'},
 #                                     {'link': 'COURSE/announcements', 'text': 'Archived Announcements'},
 #                                     'divider',
