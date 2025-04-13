@@ -122,7 +122,7 @@ cs_permissions = {'Admin': ['view_all', 'submit_all', 'impersonate', 'admin', 'w
                'UTA': ['view_all', 'submit_all', 'impersonate', 'grade'],
                'LA': ['view_all', 'submit_all','impersonate', 'grade'],
                'Student': ['view', 'submit'],
-               'Guest': ['view']}
+               'Guest': ['view', 'submit']}
 
 
 # TIMING

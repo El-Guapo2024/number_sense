@@ -236,7 +236,7 @@ the discussion above:
 * `sample_var(values)` should take a list of $x$ values as its argument, and it should return the sample variance of those values.
 
 * `sample_std(values)` should take a list of $x$ values as its argument, and it should return the sample standard deviation of those values.
-
+f
 * `sample_cov(x_values, y_values)` should take a list of $x$ values and a list of $y$ values as its arguments, and it should return the sample covariance of $X$ and $Y$.
 
 * `pearson_r(x_values, y_values)` should take a list of $x$ values and a list of $y$ values as its arguments, and it should return Pearson's r value for $X$ and $Y$.

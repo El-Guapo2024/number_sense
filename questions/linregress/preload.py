@@ -6,11 +6,12 @@ matplotlib.use('Agg')
 
 import matplotlib.pyplot as _p
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk, FigureCanvasAgg
-
+import tkinter
+from matplotlib.figure import Figure
 from io import BytesIO
 import base64 as _b64
 
-class PlotWindowBase(_p.Figure):
+class PlotWindowBase(Figure):
     """
     Tk window containing a matplotlib plot.  In addition to the functions
     described below, also supports all functions contained in matplotlib's
@@ -26,7 +27,7 @@ class PlotWindowBase(_p.Figure):
                         ``False`` to create and save plots without a window
                         popping up)
         """
-        _p.Figure.__init__(self)
+        super().__init__()
         self.ax = self.add_subplot(111)
         self.visible = visible
         if self.visible:
@@ -78,6 +79,9 @@ class PlotWindowBase(_p.Figure):
         if name.startswith('_'):
             name = name[1:]
             show = False
+        # Don't try to access axes during initialization
+        if not hasattr(self, 'ax'):
+            raise AttributeError(f"PlotWindow object has no attribute {name}")
         if hasattr(self.axes[0], name):
             attr = getattr(self.axes[0], name)
             if hasattr(attr,'__call__'):
@@ -93,7 +97,7 @@ class PlotWindowBase(_p.Figure):
             else:
                 return attr
         else:
-            raise AttributeError("PlotWindow object has no attribute %s" % name)
+            raise AttributeError(f"PlotWindow object has no attribute {name}")
 
     def title(self,title):
         """

@@ -1,25 +1,11 @@
-Hello!  This sample course, which is designed to go over some of the basics of
-CAT-SOOP, is set up to mirror the structure of a regular CAT-SOOP course.
-
-This is the main page, which, for a normal class, might contain a calendar, or
-weekly announcements, or links to assignments.  The contents of this page are
-contained in the `content.catsoop` in the root of the `sample_course`
-directory.  You should also take a look at `preload.py`, which controls much of
-the behavior of this page.
-
-Additionally, more detailed information is available from the "Pages" dropdown
-at the top of this page.
-
-
 Hello! Welcome to the Number Sense State Champion Program. 
 In this program we will help you learn all the tips and tricks to be Number Sense Master.
 
-# Content
 Our course will consist of two parts the main Course Part where you can learn trick in a gradual
 manner until you reach mastery for each. 
 
 The practice part where you will keep your skills sharp and spiffy. Using a similar behaviour to
-Anki to practice your weakest skills and presented to you in simimilar format to zeta mac. 
+Anki to practice your weakest skills and presented to you in simimilar format to zeta mac. Think if Zeta Mac and anki had a kid.
 
 Lastly, you are welcome to go to our resource page where we will link all the resources used for this
 course along with other resources to aid you in your learning. 

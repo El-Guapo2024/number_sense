@@ -5,16 +5,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "7667:7667"
+      - "7668:7668"
     volumes:
       - catsoop_data:/app/data
       - .:/.local/share/catsoop/courses/number_sense/
-    environment:
-      - CATSOOP_HOST=0.0.0.0
-      - CATSOOP_PORT=7667
-      - CATSOOP_CONFIG=/root/.config/catsoop/config.py
-      - CATSOOP_DATA_DIR=/app/data
-      - CATSOOP_CONFIG_DIR=/root/.config/catsoop
+      - ./config.py:/root/.config/catsoop/config.py
     restart: unless-stopped
-
 volumes:
   catsoop_data: 
