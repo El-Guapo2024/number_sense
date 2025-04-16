@@ -1,0 +1,1 @@
+cs_long_name = 'Sum and Product of Coefficients in Binomial Expansion' 

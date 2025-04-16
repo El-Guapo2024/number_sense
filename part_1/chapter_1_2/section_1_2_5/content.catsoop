@@ -1,0 +1,564 @@
+You can take what we learned from the 25’s and 75’s trick (converting them to fractions of 100) with a
+variety of potential fractions. $1 \over 8$’s are chosen often because:
+
+$$
+125 = {1 \over 8} \times 1000 \quad 37.5 = {3 \over 8} \times 100 
+\quad 6.25 = {5 \over 8} \times 10
+$$
+
+In addition, you see $1 \over 6$’s, $1 \over 3$’s, $1 \over 9 $’s, and sometimes even $1 \over 12$
+’s for approximation problems (because they do not go evenly into 100, 1000, etc..., they have to be approximated usually).
+
+$$
+223 ≈ {2 \over 9} \times 1000 \quad  8333.3 ≈ {5 \over 6} \times 10000 ≈ {1 \over 12} \times 100000  \quad 
+327 ≈ {1 \over 3} \times 1000
+$$
+
+For approximations you will rarely ever see them equate to almost exactly to the correct fraction. For
+example you might use $2 \over 3$ \times 1000 for any value from 654 − 678. Usually you can tell for the approximation
+problems what fraction the test writer is really going for.
+
+[Question 1 - 10.]: # 
+<question pythonliteral>
+csq_prompt = 'What is 125 × 320?'
+csq_soln = 125 * 320
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 8333 × 24?'
+csq_soln = 8333 * 24
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 138 ÷ 125?'
+csq_soln = 138 / 125
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 57381 ÷ 128?'
+csq_soln = 57381 / 128
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 245632 ÷ 111?'
+csq_soln = 245632 / 111
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 16667 ÷ 8333 × 555?'
+csq_soln = 16667 / 8333 * 555
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 625 × 320?'
+csq_soln = 625 * 320
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 774447 ÷ 111?'
+csq_soln = 774447 / 111
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 62.5 × 3248?'
+csq_soln = 62.5 * 3248
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 12.5 × 480?'
+csq_soln = 12.5 * 480
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+[Question 11 - 20.]: #  
+
+<question pythonliteral>
+csq_prompt = 'What is 17304 ÷ 118?'
+csq_soln = 17304 / 118
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 87% of 5590?'
+csq_soln = 0.87 * 5590
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 457689 ÷ 111?'
+csq_soln = 457689 / 111
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 625 × 648?'
+csq_soln = 625 * 648
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 375 × 408?'
+csq_soln = 375 * 408
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 359954 ÷ 1111?'
+csq_soln = 359954 / 1111
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 88 × 12.5 × 0.11?'
+csq_soln = 88 * 12.5 * 0.11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 719 × 875?'
+csq_soln = 719 * 875
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 428571 × 22?'
+csq_soln = 428571 * 22
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 85714.2 ÷ 714.285?'
+csq_soln = 85714.2 / 714.285
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+[Question 21 - 30.]: # 
+<question pythonliteral>
+csq_prompt = 'What is 488 × 375?'
+csq_soln = 488 * 375
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 6311 × 1241?'
+csq_soln = 6311 * 1241
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 884422 ÷ 666?'
+csq_soln = 884422 / 666
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 106.25% of 640?'
+csq_soln = 1.0625 * 640
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 6388 × 3.75?'
+csq_soln = 6388 * 3.75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 240 × 875?'
+csq_soln = 240 * 875
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 12.75 × 28300 ÷ 102?'
+csq_soln = 12.75 * 28300 / 102
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 375 × 24.8?'
+csq_soln = 375 * 24.8
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 857142 × 427?'
+csq_soln = 857142 * 427
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 0.0625 × 0.32?'
+csq_soln = 0.0625 * 0.32
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+[Question 31 - 40.]: # 
+<question pythonliteral>
+csq_prompt = 'What is 16667 × 369?'
+csq_soln = 16667 * 369
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 918576 ÷ 432?'
+csq_soln = 918576 / 432
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 456789 ÷ 123?'
+csq_soln = 456789 / 123
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 106% of 319?'
+csq_soln = 1.06 * 319
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 571428 × 0.875?'
+csq_soln = 571428 * 0.875
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 123% of 882?'
+csq_soln = 1.23 * 882
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 95634 ÷ 278?'
+csq_soln = 95634 / 278
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 273849 ÷ 165?'
+csq_soln = 273849 / 165
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 5714.28 × 85?'
+csq_soln = 5714.28 * 85
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 9.08% of 443322?'
+csq_soln = 0.0908 * 443322
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 8333 × 23?'
+csq_soln = 8333 * 23
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 0.125 × 482?'
+csq_soln = 0.125 * 482
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 714285 × 0.875?'
+csq_soln = 714285 * 0.875
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 87% of 789?'
+csq_soln = 0.87 * 789
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 16667 × 49?'
+csq_soln = 16667 * 49
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 123456 ÷ 111?'
+csq_soln = 123456 / 111
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 875421 ÷ 369?'
+csq_soln = 875421 / 369
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 71984 × 1.371?'
+csq_soln = 71984 * 1.371
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 63% of 7191?'
+csq_soln = 0.63 * 7191
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 5714.28 × 83?'
+csq_soln = 5714.28 * 83
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1428.57 × 62?'
+csq_soln = 1428.57 * 62
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 80520 ÷ 131?'
+csq_soln = 80520 / 131
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 142.857 × 428.571?'
+csq_soln = 142.857 * 428.571
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 12509 × 635?'
+csq_soln = 12509 * 635
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1234 × 567?'
+csq_soln = 1234 * 567
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 789123 ÷ 456?'
+csq_soln = 789123 / 456
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 625 × 65?'
+csq_soln = 625 * 65
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1428.57 × 73?'
+csq_soln = 1428.57 * 73
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 7142.85 × 34.2?'
+csq_soln = 7142.85 * 34.2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 333 × 808 × 444?'
+csq_soln = 333 * 808 * 444
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 571428 × 34?'
+csq_soln = 571428 * 34
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 833 × 612?'
+csq_soln = 833 * 612
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 8333 × (481 + 358)?'
+csq_soln = 8333 * (481 + 358)
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 234678 ÷ 9111?'
+csq_soln = 234678 / 9111
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 428.571 × 87.5?'
+csq_soln = 428.571 * 87.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 375.1 × 83.33 × 1.595?'
+csq_soln = 375.1 * 83.33 * 1.595
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 8333 ÷ 6666 × 4444?'
+csq_soln = 8333 / 6666 * 4444
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 8333 × 12.5% × 0.12?'
+csq_soln = 8333 * 0.125 * 0.12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 639 × 375 ÷ 28?'
+csq_soln = 639 * 375 / 28
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 6250 ÷ 8333 × 8888?'
+csq_soln = 6250 / 8333 * 8888
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 416666 ÷ 555 × 76?'
+csq_soln = 416666 / 555 * 76
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 375 ÷ 833 × 555?'
+csq_soln = 375 / 833 * 555
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 438 ÷ 91.11% × 11.1?'
+csq_soln = 438 / (91.11 / 100) * 11.1
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 857142 ÷ 428571 × 7777?'
+csq_soln = 857142 / 428571 * 7777
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 546 ÷ 45.5% × 10.8?'
+csq_soln = 546 / (45.5 / 100) * 10.8
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 54.5454 × 66.6 × 58?'
+csq_soln = 54.5454 * 66.6 * 58
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 456 ÷ 18.75% × 14?'
+csq_soln = 456 / (18.75 / 100) * 14
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 818 ÷ 44.49% × 12.5?'
+csq_soln = 818 / (44.49 / 100) * 12.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 62.5 ÷ 83.3 × 888?'
+csq_soln = 62.5 / 83.3 * 888
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 797 ÷ 87.5% × 7.10?'
+csq_soln = 797 / (87.5 / 100) * 7.10
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 888 × 87.5% ÷ 7.11?'
+csq_soln = 888 * 0.875 / 7.11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1250 ÷ 1666 × 4444?'
+csq_soln = 1250 / 1666 * 4444
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 85858 ÷ 585?'
+csq_soln = 85858 / 585
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is (51597 ÷ 147)²?'
+csq_soln = (51597 / 147) ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 462 × 315?'
+csq_soln = 462 * 315
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1337 × 485?'
+csq_soln = 1337 * 485
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 987 × 432?'
+csq_soln = 987 * 432
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 234 × 68?'
+csq_soln = 234 * 68
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 512 × 72?'
+csq_soln = 512 * 72
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 120 × 154?'
+csq_soln = 120 * 154
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

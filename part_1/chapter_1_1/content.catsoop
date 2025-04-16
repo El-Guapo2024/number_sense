@@ -1,0 +1,582 @@
+
+
+
+When multiplying two two-digit numbers ab and cd swiftly, a method of LIOFing (Last-Inner+Outer-First)
+is used. To understand this concept better, lets take a look at what we
+do when we multiply ab × cd:
+
+$$ 
+\begin{align*}
+ab &= 10a + b \\
+cd &= 10c + d \\
+(10a + b)(10c + d) &= 100(ac) + 10(ad + bc) + bd
+\end{align*}
+$$
+
+A couple of things can be seen by this:
+1. The one’s digit of the answer is simply bd or the Last digits (by Last I mean the least significant digit)
+of the two numbers multiplied.
+2. The ten’s digit of the answer is (ad + bc) which is the sum of the Inner digits multiplied together plus
+the Outer digits multiplied.
+3. The hundred’s digit is ac which are the First digits (again, by First I mean the most significant digit)
+multiplied with each other.
+4. If in each step you get more than a single digit, you carry the extra (most significant digit) to the next
+calculation. For example:
+$$
+\begin{align*}
+74 × 23 = \\
+Units: 3 × 4 = 12 \\
+Tens: 3 × 7 + 2 × 4 + 1 = 30 \\
+Hundreds: 2 × 7 + 3 = 17 \\
+Answer: 1702 \\
+\end{align*}
+$$
+
+Where the bold represents the answer and the italicized represents the carry.
+Similarly, you can extend this concept of LIOFing to multiply any n-digit number by m-digit number in a
+procedure I call “moving down the line.” Let’s look at an example of a 3-digit multiplied by a 2-digit:
+
+$$
+\begin{align*}
+493 × 23 = \\
+Ones: 3 × 3 = 9 \\
+Tens: 3 × 9 + 2 × 3 = 33 \\
+Hundreds: 3 × 4 + 2 × 9 + 3 = 33 \\
+Thousands: 2 × 4 + 3 = 11 \\
+Answer: 11339 \\
+\end{align*}
+$$
+
+As one can see, you just continue multiplying the two-digit number “down the line” of the three-digit number,
+writing down what you get for each digit then moving on (always remembering to carry when necessary).
+The following are exercises to familiarize you with this process of multiplication:
+
+<catsoop-section>Questions</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is 95 × 30?'
+csq_soln = 95 * 30
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 90 × 78?'
+csq_soln = 90 * 78
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 51 × 11?'
+csq_soln = 51 * 11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 83 × 51?'
+csq_soln = 83 * 51
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 64 × 53?'
+csq_soln = 64 * 53
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 65 × 81?'
+csq_soln = 65 * 81
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 92 × 76?'
+csq_soln = 92 * 76
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 46?'
+csq_soln = 25 * 46
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 94 × 92?'
+csq_soln = 94 * 92
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 27 × 64?'
+csq_soln = 27 * 64
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 34 × 27?'
+csq_soln = 34 * 27
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 11 × 77?'
+csq_soln = 11 * 77
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 44 × 87?'
+csq_soln = 44 * 87
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 86 × 63?'
+csq_soln = 86 * 63
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 54 × 92?'
+csq_soln = 54 * 92
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 83 × 68?'
+csq_soln = 83 * 68
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 72 × 65?'
+csq_soln = 72 * 65
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 81 × 96?'
+csq_soln = 81 * 96
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 57 × 89?<br/>'
+csq_soln = 57 * 89
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 98?<br/>'
+csq_soln = 25 * 98
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 34 × 32?<br/>'
+csq_soln = 34 * 32
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 88 × 76?<br/>'
+csq_soln = 88 * 76
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 22 × 11?<br/>'
+csq_soln = 22 * 11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 36 × 69?<br/>'
+csq_soln = 36 * 69
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 35 × 52?<br/>'
+csq_soln = 35 * 52
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 15 × 88?<br/>'
+csq_soln = 15 * 88
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 62 × 48?<br/>'
+csq_soln = 62 * 48
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 56 × 40?<br/>'
+csq_soln = 56 * 40
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 62 × 78?<br/>'
+csq_soln = 62 * 78
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 57 × 67?<br/>'
+csq_soln = 57 * 67
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 28 × 44?<br/>'
+csq_soln = 28 * 44
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 80 × 71?<br/>'
+csq_soln = 80 * 71
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 51 × 61?<br/>'
+csq_soln = 51 * 61
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 81 × 15?<br/>'
+csq_soln = 81 * 15
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 64 × 14?<br/>'
+csq_soln = 64 * 14
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 47 × 37?<br/>'
+csq_soln = 47 * 37
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 79 × 97?'
+csq_soln = 79 * 97
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 99 × 87?<br/>'
+csq_soln = 99 * 87
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 49 × 54?<br/>'
+csq_soln = 49 * 54
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 29 × 67?<br/>'
+csq_soln = 29 * 67
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 38 × 98?<br/>'
+csq_soln = 38 * 98
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 75 × 47?<br/>'
+csq_soln = 75 * 47
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 77 × 34?<br/>'
+csq_soln = 77 * 34
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 49 × 94?<br/>'
+csq_soln = 49 * 94
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 71 × 29?<br/>'
+csq_soln = 71 * 29
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 85 × 66?<br/>'
+csq_soln = 85 * 66
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 13 × 65?<br/>'
+csq_soln = 13 * 65
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 64 × 11?<br/>'
+csq_soln = 64 * 11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 62 × 15?<br/>'
+csq_soln = 62 * 15
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 43 × 65?<br/>'
+csq_soln = 43 * 65
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 74 × 72?<br/>'
+csq_soln = 74 * 72
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 49 × 41?<br/>'
+csq_soln = 49 * 41
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 23 × 70?<br/>'
+csq_soln = 23 * 70
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 72 × 75?<br/>'
+csq_soln = 72 * 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 53 × 59?<br/>'
+csq_soln = 53 * 59
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 82 × 91?<br/>'
+csq_soln = 82 * 91
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 14 × 17?<br/>'
+csq_soln = 14 * 17
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 67 × 27?<br/>'
+csq_soln = 67 * 27
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 85 × 25?<br/>'
+csq_soln = 85 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 99?<br/>'
+csq_soln = 25 * 99
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 137 × 32?<br/>'
+csq_soln = 137 * 32
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 428 × 74?<br/>'
+csq_soln = 428 * 74
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 996 × 47?<br/>'
+csq_soln = 996 * 47
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 654 × 45?<br/>'
+csq_soln = 654 * 45
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 443 × 39?<br/>'
+csq_soln = 443 * 39
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 739 × 50?<br/>'
+csq_soln = 739 * 50
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 247 × 87?<br/>'
+csq_soln = 247 * 87
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 732 × 66?<br/>'
+csq_soln = 732 * 66
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 554 × 77?<br/>'
+csq_soln = 554 * 77
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 324 × 11?<br/>'
+csq_soln = 324 * 11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 111 × 54?<br/>'
+csq_soln = 111 * 54
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 885 × 78?<br/>'
+csq_soln = 885 * 78
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 34 × 655?<br/>'
+csq_soln = 34 * 655
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 52 × 532?<br/>'
+csq_soln = 52 * 532
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 33 × 334?<br/>'
+csq_soln = 33 * 334
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 45 × 301?<br/>'
+csq_soln = 45 * 301
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 543 × 543?<br/>'
+csq_soln = 543 * 543
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 606 × 212?<br/>'
+csq_soln = 606 * 212
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 657 × 322?<br/>'
+csq_soln = 657 * 322
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 543 × 230?<br/>'
+csq_soln = 543 * 230
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 111 × 121?<br/>'
+csq_soln = 111 * 121
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 422 × 943?<br/>'
+csq_soln = 422 * 943
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 342 × 542?<br/>'
+csq_soln = 342 * 542
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 789 × 359?<br/>'
+csq_soln = 789 * 359
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 239 × 795?<br/>'
+csq_soln = 239 * 795
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 123 × 543?<br/>'
+csq_soln = 123 * 543
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 683 × 429?<br/>'
+csq_soln = 683 * 429
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 222 × 796?<br/>'
+csq_soln = 222 * 796
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 

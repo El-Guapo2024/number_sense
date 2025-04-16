@@ -1,0 +1,1 @@
+cs_long_name = '1.2.2 Multiplying by 101 Trick'

@@ -1,0 +1,1 @@
+cs_long_name = 'Repeating Decimals in Other Bases - Convert to Base 10' 

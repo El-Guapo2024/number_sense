@@ -1,0 +1,85 @@
+There is a quick trick for easy computation for squares from 41 − 59. Let k be a 1-digit integer, then any of
+those squares can be expressed as (50 ± k):
+
+\begin{align}
+(50 \pm k)^2 &= 2500 \pm 100 \times k + k^2 \\
+&= 100(25 \pm k) = k^2 \\
+\end{align}
+
+What this means is that:
+1. The tens/ones digits is just the difference the number is from 50, squared $(k^2)$.
+2. The remainder of the answer is taken by adding (if the number is greater than 50) or subtracting (if
+the number is less than 50) that difference from 25.
+19
+3. Note: You could extend this concept to squares outside the range of 41 − 59 as long as you keep up
+with the carry appropriately.
+Let’s illustrate with a couple of examples:
+
+\begin{align}
+&\text{Tens/Ones}: &&(50 - 46)^2 = 4^2 && \textbf{16} \\
+46^2 = \quad &\text{Rest of Answer: } && 25 - 4 &&\textbf{21} \\
+&\text{Answer:} && &&\textbf{2116}
+\end{align}
+
+\begin{align}
+&\text{Tens/Ones}: &&(57 - 50)^2 = 7^2 && \textbf{49} \\
+57^2 = \quad &\text{Rest of Answer: } && 25 + 7 &&\textbf{32} \\
+&\text{Answer:} && &&\textbf{3249}
+\end{align}
+
+
+\begin{align}
+&\text{Tens/Ones}: &&(61 - 50)^2 = 11^2 && \textbf{121} \\
+61^2 = \quad &\text{Rest of Answer: } && 25 + 11 + 1 &&\textbf{37} \\
+&\text{Answer:} && &&\textbf{3721}
+\end{align}
+
+<catsoop-section>P-Set 1.2.9<catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is 58²?'
+csq_soln = 58 ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 510²?'
+csq_soln = 510 ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 47 × 47?'
+csq_soln = 47 * 47
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 53²?'
+csq_soln = 53 ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 48 × 49 × 50?'
+csq_soln = 48 * 49 * 50
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 56²?'
+csq_soln = 56 ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 59 × 59?'
+csq_soln = 59 * 59
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 41²?'
+csq_soln = 41 ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

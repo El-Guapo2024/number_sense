@@ -1,0 +1,1 @@
+cs_long_name = "1.2.10 Multiplying Two Numbers Equidistant from a Third Number"

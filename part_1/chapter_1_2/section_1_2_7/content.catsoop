@@ -1,0 +1,283 @@
+Let’s look at two numbers over 100 first.<br>
+Express $n_1 = (100 + a)$ and $n_2 = (100 + b)$ then:
+
+\begin{align}
+n_1 \times n_2 &= (100 + a) \times (100 + b) \\
+&= 10000 + 100(a+b) + ab \\
+&= 100(100 + a + b) + ab \\
+&= 100(n_1 + b) + ab = 100(n_2 + a) + ab \\
+\end{align}
+
+1. The Tens/Ones digits are just the difference the two numbers are above 100 multiplied together (ab)
+2. The remainder of the answer is just $n_1$ plus the amount $n_2$ is above 100, or $n_2$ plus the amount $n_1$ is
+above 100.
+
+\begin{align}
+&\text{Tens/Ones:}  &&8 \times 3 \quad &&\textbf{24} \\
+103 \times 108 = \quad&\text{Rest of Answer: } &&103 + 8 \text{ or } 108 +3 &&\textbf{111} \\
+&\text{Answer:} && &&\textbf{11124}
+\end{align}
+
+Now let’s look at two numbers below 100. <br>
+$n_1$ = (100 − a) and $n_2$ = (100 − b) so:
+
+\begin{align}
+n_1 \times n_2 &= (100 - a) \times (100 - b) \\
+&= 10000 - 100(a+b) + ab \\
+&= 100(100 - a - b) + ab \\
+&= 100(n_1 - b) + ab = 100(n_2 - a) + ab \\
+\end{align}
+
+1. Again, Tens/Ones digits are just the difference the two numbers are above 100 multiplied together (ab)
+2. The remainder of the answer is just $n_1$ minus the difference $n_2$ is from 100, or $n_2$ minus the difference
+$n_1$ is from 100.
+
+\begin{align}
+&\text{Tens/Ones:}  && (100 - 97) \times (100 - 94) = 3 \times 6 &&\textbf{18} \\
+97 \times 94 = \quad&\text{Rest of Answer: } && 97 -6 \text{ or } 94 - 3 &&\textbf{91} \\
+&\text{Answer:} && &&\textbf{9118}
+\end{align}
+
+Now to multiply two numbers, one above and one below is a little bit more tricky.
+Let $n_1$ = (100 + a) which is the number above 100 and $n_2$ = (100 − b) which is the number below 100, then:
+
+\begin{align}
+n_1 \times n_2 &= (100 + a) \times (100 - b) \\
+&= 10000 - 100(a+b) + ab \\
+&= 100(100 + a - b) - ab \\
+&= 100(n_1 - b -1) + (100- ab) \\
+\end{align}
+
+To see what this means, it is best to use an example:
+
+\begin{align}
+&\text{Tens/Ones:}  && 100 - 3 \times 6 &&\textbf{82} \\
+103 \times 94 = \quad&\text{Rest of Answer: } && 103 - 6 - 1 &&\textbf{96} \\
+&\text{Answer:} && &&\textbf{9682}
+\end{align}
+
+So the trick is:
+1. The Tens/Ones is just the difference the two numbers are from 100 multiplied together then subtracted
+from 100.
+2. The rest of the answer is just the number that is larger than 100 minus the difference the smaller
+number is from 100 minus an additional 1
+Let’s look at another example to solidify this:
+
+
+\begin{align}
+&\text{Tens/Ones:}  && 100 - 8 \times 7 &&\textbf{44} \\
+108 \times 93 = \quad&\text{Rest of Answer: } && 108 - 7 - 1 &&\textbf{100} \\
+&\text{Answer:} && &&\textbf{10044}
+\end{align}
+
+It should be noted that you can extend this trick to not just integers around 100 but 1000, 10000, and so
+forth. For the extension, you just need to keep track how many digits each part is. For example, when we
+are multiplying two numbers over 100 (say 104 × 103) the first two digits would be 4 × 3 = 12, however if
+we were doing two numbers over 1000 (like 1002 × 1007) the first three digits would be 2 × 7 = 014 not 14
+like what you would be used to putting. Let’s look at the example presented above and the procedure:
+
+\begin{align}
+&\text{Hundreds/Tens/Ones:}  && 2 \times 7 &&\textbf{044} \\
+1002 \times 1008 = \quad&\text{Rest of Answer: } && 1002 + 7 = 1002 + 7  &&\textbf{1009} \\
+&\text{Answer:} && &&\textbf{1009014}
+\end{align}
+
+The best way to remember to include the “extra” digit is to think that when you multiply 1002 × 1007 you
+are going to expect a seven digit number. Now adding 1002 + 7 = 1009 gives you four of the digits, so you
+need the first part to produce three digits for you.
+Let’s look at an example of two numbers below 1000:
+
+\begin{align}
+&\text{Hundreds/Tens/Ones:}  && 7 \times 6 &&\textbf{042} \\
+993 \times 994 = \quad&\text{Rest of Answer: } && 993 -6  = 994 - 7  &&\textbf{987} \\
+&\text{Answer:} && &&\textbf{987042}
+\end{align}
+
+The following are some practice problems so that you can fully understand this trick:
+<catsoop-section>P-Set 1.2.7<catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is 89 × 97?'
+csq_soln = 89 * 97
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 96 × 97?'
+csq_soln = 96 * 97
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 103 × 109?'
+csq_soln = 103 * 109
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 93 × 97?'
+csq_soln = 93 * 97
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 103 × 107?'
+csq_soln = 103 * 107
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 93 × 89?'
+csq_soln = 93 * 89
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 102 × 108?'
+csq_soln = 102 * 108
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 109 × 107?'
+csq_soln = 109 * 107
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 96 × 89?'
+csq_soln = 96 * 89
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 92 × 97?'
+csq_soln = 92 * 97
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 103 × 104?'
+csq_soln = 103 * 104
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 102 × 103?'
+csq_soln = 102 * 103
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 92 × 93?'
+csq_soln = 92 * 93
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 106 × 107?'
+csq_soln = 106 * 107
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 97 × 89?'
+csq_soln = 97 * 89
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 94 × 98?'
+csq_soln = 94 * 98
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 94 × 91?'
+csq_soln = 94 * 91
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 91 × 98?'
+csq_soln = 91 * 98
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 993 × 994?'
+csq_soln = 993 * 994
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 103 × 96?'
+csq_soln = 103 * 96
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 93 × 103?'
+csq_soln = 93 * 103
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 991 × 989?'
+csq_soln = 991 * 989
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1009 × 1004?'
+csq_soln = 1009 * 1004
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 97 × 107?'
+csq_soln = 97 * 107
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 93 × 104?'
+csq_soln = 93 * 104
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 96 × 103?'
+csq_soln = 96 * 103
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 991 × 991?'
+csq_soln = 991 * 991
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 104 × 97?'
+csq_soln = 104 * 97
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1003 × 1008?'
+csq_soln = 1003 * 1008
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 98^2 + 97^2?'
+csq_soln = 98**2 + 97**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 19^2 × 3^2 * 2^2?'
+csq_soln = 119**2 * 3**2 * 2**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

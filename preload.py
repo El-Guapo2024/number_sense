@@ -23,11 +23,13 @@ cs_top_menu = [
                                 {'text': 'Structure', 'link': 'COURSE/structure'},
                                 {'text': 'Markdown', 'link': 'COURSE/markdown'},
                                 {'text': 'Questions', 'link': 'COURSE/questions'},
-
                               ]},
     {'text': 'Course', 'link': [
-                                {'text': 'Chapter 1', 'link': 'COURSE/chapter_1'}
-                                ]},
+                                {'text': 'Part 1: Numerical Tricks', 'link': 'COURSE/part_1'},
+                                {'text': 'Part 2: Memorizations', 'link': 'COURSE/part_2'},
+                                {'text': 'Part 3: Miscellaneous Topics', 'link': 'COURSE/part_3'},
+                                {'text': 'Part 4: Tricks Added with 2018', 'link': 'COURSE/part_4'}
+                              ]},
     {'text': 'Practice', 'link': [
                                 {'text': 'Practice', 'link': 'COURSE/practice'}
                                 ]},

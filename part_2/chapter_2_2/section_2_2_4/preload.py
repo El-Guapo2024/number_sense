@@ -1,0 +1,1 @@
+cs_long_name = 'Number of Diagonals of a Polygon' 

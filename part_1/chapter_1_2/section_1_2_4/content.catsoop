@@ -1,0 +1,110 @@
+In a similar fashion, you can multiply by 75 by treating it as {3\ over 4}
+·100. So when you multiply by 75, first divide
+the number you’re multiplying by 4 then multiply by 3 then move the decimal over two places to the right.
+
+\begin{align*}
+76 \times 75 = {{76 \times 3} \over 4 }
+\times 100 = 19 \times 3 \times 100 = 5700 \\
+42 \times 75 = {{42 \times 3} \over 4 } 
+\times 100 = 10.5 \times 3 \times 100 = 3150
+\end{align*}
+
+Again, you can use the same principle to divide by 75 as well, only you multiply by {4 \over 3}
+then divide by 100
+(or move the decimal place over two digits to the left).
+
+$$
+{81 \over 75 } = {8  \over {{3 \times 100} \over 4}} 
+= {{81 \times 4} \over {3 \times 100 }} 
+= {{27 \times 4} \over 100 } = 1.08
+$$
+
+<question pythonliteral>
+csq_prompt = 'What is 48 × 75?'
+csq_soln = 48 * 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 64 × 75?'
+csq_soln = 64 * 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 66 ÷ 75?'
+csq_soln = 66 / 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 84 × 75?'
+csq_soln = 84 * 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 443322 ÷ 751?'
+csq_soln = 443322 / 751
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 28 × 75?'
+csq_soln = 28 * 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 75 × 24?'
+csq_soln = 75 * 24
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 7532 × 1468?'
+csq_soln = 7532 * 1468
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 48 ÷ 75?'
+csq_soln = 48 / 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 566472 ÷ 748?'
+csq_soln = 566472 / 748
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 96 ÷ 75?'
+csq_soln = 96 / 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 75 × 11 × 24?'
+csq_soln = 75 * 11 * 24
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 4800 ÷ 75?'
+csq_soln = 4800 / 75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 75 × 48 × 15?'
+csq_soln = 75 * 48 * 15
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 8.8 × 7.5 × 1.1?'
+csq_soln = 8.8 * 7.5 * 1.1
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

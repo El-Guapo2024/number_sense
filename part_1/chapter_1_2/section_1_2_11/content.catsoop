@@ -1,0 +1,93 @@
+The following trick involves multiplying two, two-digit numbers whose digits are reverse of each other.
+
+\begin{align}
+ab \times ba  &= (10a + b) \times (10b + a) \\
+&= 100(a\times b) + 10(a^2 + b^2) + a \times b
+\end{align}
+
+Here is what we know from the above result:
+1. The Ones digit of the answer is just the two digits multiplied together.
+2. The Tens digit of the answer is the sum of the squares of the digits.
+3. The Hundreds digit of the answer is the two digits multiplied together.
+Let’s look at an example:
+
+\begin{align}
+&\text{Ones:} && 3 \times 5 && \textbf{15} \\
+53 \times 35 = \quad &\text{Tens} &&3^2 + 5^2 + 1 && \textbf{35} \\
+&\text{Hundreds:} && 3 \times 5 + 3 &&\textbf{18} \\
+&\text{Answer: } && &&\textbf{1855}
+\end{align}
+
+<catsoop-section> P-Set 1.2.11<catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is 43 × 34?'
+csq_soln = 43 * 34
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 23 × 32?'
+csq_soln = 23 * 32
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 31 × 13?'
+csq_soln = 31 * 13
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 21 × 12?'
+csq_soln = 21 * 12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 27 × 72?'
+csq_soln = 27 * 72
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 61 × 16?'
+csq_soln = 61 * 16
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 15 × 51?'
+csq_soln = 15 * 51
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 14 × 41?'
+csq_soln = 14 * 41
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 18 × 81?'
+csq_soln = 18 * 81
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 36 × 63?'
+csq_soln = 36 * 63
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 42 × 24?'
+csq_soln = 42 * 24
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 26 × 62?'
+csq_soln = 26 * 62
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

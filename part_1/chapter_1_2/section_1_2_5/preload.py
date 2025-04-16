@@ -1,0 +1,1 @@
+cs_long_name = "1.2.5 Multiplying by Any Fraction of 100, 1000, etc..."

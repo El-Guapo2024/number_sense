@@ -1,0 +1,207 @@
+
+The trick to multiplying by 25 is to think of it as $100 \over 4$
+
+So the strategy is to take what ever you are multiplying
+with, divide it by 4 then move the decimal over to the right two places. Here are a couple of examples:
+
+
+\begin{align*}
+84 \times 25 = {84 \over 4} \times 100 = 21 \times 100 = 2100 \\
+166 \times 25 = {166 \over 4} \times 100 = 41.5 \times 100 = 4150
+\end{align*}
+
+
+In a similar manner, you can use the same principle to divide numbers by 25 easily. The difference is you
+multiply by 4 and then move the decimal over to the left two places
+
+\begin{align*}
+{415 \over 25} = {{415 \over 100}  \over 4} =  {{415 \times 4} \over 100 } 
+= {1660 \over 100 } = 16.6
+\end{align*}
+
+
+<question pythonliteral>
+csq_prompt = 'What is 240 × 25?'
+csq_soln = 240 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 432?'
+csq_soln = 25 * 432
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 2.6 × 2.5?'
+csq_soln = 2.6 * 2.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 148 × 25?'
+csq_soln = 148 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 33?'
+csq_soln = 25 * 33
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 64 ÷ 25?'
+csq_soln = 64 / 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 147?'
+csq_soln = 25 * 147
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 418 × 25?'
+csq_soln = 418 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 616 ÷ 25?'
+csq_soln = 616 / 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 2.5 × 40.4?'
+csq_soln = 2.5 * 40.4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1.1 ÷ 2.5?'
+csq_soln = 1.1 / 2.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 3232 × 25?'
+csq_soln = 3232 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 97531 ÷ 246?'
+csq_soln = 97531 / 246
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'Which is smaller: 6/25 or 0.25?'
+csq_soln = '6/25' if 6/25 < 0.25 else '0.25'
+csq_check_function = lambda sub, sol: sub == sol
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 209 × 25?'
+csq_soln = 209 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is (18 + 16)(9 + 16)?'
+csq_soln = (18 + 16) * (9 + 16)
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 334455 ÷ 251?'
+csq_soln = 334455 / 251
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = '21.4 is what percent of 25?'
+csq_soln = (21.4 / 25) * 100
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 404 ÷ 25?'
+csq_soln = 404 / 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 303 × 25?'
+csq_soln = 303 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 97531 ÷ 246?'
+csq_soln = 97531 / 246
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'Which is larger: 7/25 or 0.25?'
+csq_soln = '7/25' if 7/25 > 0.25 else '0.25'
+csq_check_function = lambda sub, sol: sub == sol
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 2006 ÷ 25?'
+csq_soln = 2006 / 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 307?'
+csq_soln = 25 * 307
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = '32 is 2.5% of what number?'
+csq_soln = 32 / 0.025
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 47985 ÷ 246?'
+csq_soln = 47985 / 246
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 25 × 2003?'
+csq_soln = 25 * 2003
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 15 × 25 × 11?'
+csq_soln = 15 * 25 * 11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 11 × 24 × 25?'
+csq_soln = 11 * 24 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 11 × 18 × 25?'
+csq_soln = 11 * 18 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 248 × 250 × 252?'
+csq_soln = 248 * 250 * 252
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

@@ -1,0 +1,1 @@
+cs_long_name = 'Perfect, Abundant, and Deficient Numbers' 

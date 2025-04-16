@@ -1,0 +1,86 @@
+Here is the derivation for this trick. Let a5 represent any number ending in 5 (a could be any integer, not
+just restricted to a one-digit number).
+
+\begin{align}
+(a5)^2 &= (10a + 5)^2 \\
+&= 100a^2 + 100a + 25 \\
+= 100a(a+1) + 25 \\
+\end{align}
+
+So you can tell from this that and number ending in 5 squared will have its last two digits equal to 25 and
+the remainder of the digits can be found from taking the leading digit(s) and multiplying it by one greater
+than itself. Here are a couple of examples:
+
+\begin{align}
+&\text{Tens/Ones}  && && \textbf{25}\\
+85^2 = &\text{Thousand/Hundreds} && 8 \times (8 +1) && \textbf{72} \\
+&\text{Answer}: &&  &&\textbf{7225}
+\end{align}
+
+The next example shows how to compute $15^2$ by applying the square ending in 5 trick twice, one time to get
+what $15^2$
+is then the other to get that result squared.
+
+\begin{align}
+&\text{Tens/Ones:} &&\textbf{25} &&\text{Tens/Ones:} &&\textbf{25} \\
+15^2 = &\text{Thousands/Hundreds:} && 1 \times (1 + 1) 225^2 = &&\text{Rest of Answer:} 22 \times (23) = 11 \times 46 = 506 \\
+&\text{Answer}  &&\textbf{225} &&\text{Answer:} &&\textbf{50625}
+\end{align}
+
+In the above trick you also use the double/half trick and the 11’s trick. This just shows that for some
+problems using multiple tricks might be necessary.
+
+<question pythonliteral>
+csq_prompt = 'What is 25% of 25?'
+csq_soln = 0.25 * 25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 0.35 × 3.5?'
+csq_soln = 0.35 * 3.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 122 + 2 × 12 × 13 + 13²?'
+csq_soln = 122 + 2 * 12 * 13 + 13**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 115²?'
+csq_soln = 115 ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'If f(x) = 9x² − 12x + 4, what is f(19)?'
+csq_soln = 9 * 19**2 - 12 * 19 + 4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 45% of 45 minus 45?'
+csq_soln = (0.45 * 45) - 45
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 124²?'
+csq_soln = 124 ** 2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 505 × 505?'
+csq_soln = 505 * 505
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'A square has an area of 12.25 cm². What is its perimeter?'
+csq_soln = 4 * (12.25 ** 0.5)
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+

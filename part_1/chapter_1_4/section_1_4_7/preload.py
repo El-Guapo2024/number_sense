@@ -1,0 +1,1 @@
+cs_long_name = 'Converting a/40 and b/80, etc... to Decimals' 

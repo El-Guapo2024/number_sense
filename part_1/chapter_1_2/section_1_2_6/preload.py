@@ -1,0 +1,1 @@
+cs_long_name = "1.2.6 Double and Half Trick"

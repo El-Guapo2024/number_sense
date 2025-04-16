@@ -1,0 +1,1 @@
+cs_long_name = "1.2.3 Multiplying by 25 Trick"

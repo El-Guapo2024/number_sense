@@ -1,0 +1,1 @@
+cs_long_name = 'Remainders with a/p, b/p, and ab/p' 

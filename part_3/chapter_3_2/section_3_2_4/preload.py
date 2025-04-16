@@ -1,0 +1,1 @@
+cs_long_name = 'Changing Between Bases: Special Case' 

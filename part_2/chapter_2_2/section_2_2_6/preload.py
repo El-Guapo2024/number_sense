@@ -1,0 +1,1 @@
+cs_long_name = 'Triangular, Pentagonal, etc... Numbers' 

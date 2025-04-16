@@ -1,0 +1,96 @@
+In the same spirit as the multiplying by 11’s trick, multiplying by 101 involves adding gap connected digits.
+Let’s look at an example:
+438 × 101 =
+Ones: 1 × 8 8
+Tens: 1 × 3 3
+Hundreds: 1 × 4 + 1 × 8 12
+Thousands: 1 × 3 + 1 4
+Tens Thousands: 1 × 4 4
+Answer: 44238
+
+
+\begin{align*}
+                 &\quad \text{Ones: } 1 \times 8  && \textbf{8} \\
+                 &\quad \text{Tens: } 1 \times 3  && \textbf{3} \\
+438 \times 101 =  &\quad \text{Hundreds: } 1 \times 4 + 1 \times 8  && \textbf{12} \\
+                 &\quad \text{Thousands: } 1 \times 3 +1 && \textbf{4} \\
+                 &\quad \text{Tens Thousands: } 1 \times 4 && \textbf{4} \\
+                 &\quad \text{Answer: } \boxed{44238}
+\end{align*}
+
+
+So you see, immediately you can write down the ones/tens digits (they are the same as what you are
+multiplying 101 with). Then you sum gap digits and move down the line. Let’s look at another example:
+
+
+\begin{align*}
+                 &\quad \text{Ones/Tens: } 34 && \textbf{34} \\
+                 &\quad \text{Hundreds: } 2 + 4  && \textbf{6} \\
+438 \times 101 = &\quad \text{Thousands: } 8 + 3 && \textbf{11} \\
+                 &\quad \text{Tens Thousands: } 2 + 1 && \textbf{3} \\
+                 &\quad \text{Hundred Thousands: } 8 && \textbf{8} \\
+                 &\quad \text{Answer: } \boxed{831634}
+\end{align*}
+
+<catsoop-section> P-Set 1.2.2 <catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is 1234 × 101?'
+csq_soln = 1234 * 101
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 10.1 × 234?'
+csq_soln = 10.1 * 234
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 369 × 101?'
+csq_soln = 369 * 101
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 34845 ÷ 101?'
+csq_soln = 34845 / 101
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 22422 ÷ 101?'
+csq_soln = 22422 / 101
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 202 × 123?'
+csq_soln = 202 * 123
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'If 6 balls cost $6.06, how much do 15 balls cost?'
+csq_soln = (6.06 / 6) * 15
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 404 × 1111?'
+csq_soln = 404 * 1111
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is (48 + 53) × 151?'
+csq_soln = (48 + 53) * 151
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 8888 × 62.5% × ${ 5 \over 11}$ ?'
+csq_soln = 8888 * 0.625 * (5/11)
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+

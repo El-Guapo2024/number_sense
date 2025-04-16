@@ -1,0 +1,1 @@
+cs_long_name = 'Multiplying Three-Digit Number by Two-Digit Number' 

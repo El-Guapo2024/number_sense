@@ -1,0 +1,1 @@
+cs_long_name = 'Platonic Solids and Euler\'s Formula' 

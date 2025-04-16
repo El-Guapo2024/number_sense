@@ -1,0 +1,250 @@
+To illustrate this concept, let’s look at an example of this type of problem: 83 × 87.
+Notice that both 83 and 87 are 2 away from 85. So:
+
+\begin{align}
+&83 \times 87 = (85 - 2) \times (85 + 2) \\
+&\text{Which notice thisis just the difference of two squares} \\
+&(85 - 2) \times (85+2) = 85^2 - 2^2 = 7225 -4 = \textbf{7221} \\
+\end{align}
+
+So the procedure is:
+1. Find the middle number between the two numbers being multiplied and square it.
+2. Subtract from that the difference between the middle number and one of two numbers squared.
+For most of these types of problems, the center number will be a multiple of 5, making the computation of
+its square relatively simple (See Section 1.2.7, Square’s Ending in 5 Trick). The following illustrates another
+example:
+
+\begin{align}
+&61 \times 69 = 69^2 -4^2 = 4209
+\end{align}
+
+<catsoop-section>P-Set 1.2.10 <catsoop-section>
+
+
+<question pythonliteral>
+csq_prompt = 'What is 84 × 86?'
+csq_soln = 84 * 86
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 53 × 57?'
+csq_soln = 53 * 57
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 48 × 52?'
+csq_soln = 48 * 52
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 62 × 58?'
+csq_soln = 62 * 58
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 6.8 × 7.2?'
+csq_soln = 6.8 * 7.2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 88 × 82?'
+csq_soln = 88 * 82
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 36 × 24?'
+csq_soln = 36 * 24
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 7.6 × 8.4?'
+csq_soln = 7.6 * 8.4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 5.3 × 4.7?'
+csq_soln = 5.3 * 4.7
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 51 × 59 + 16?'
+csq_soln = 51 * 59 + 16
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 96 × 104?'
+csq_soln = 96 * 104
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 81 × 89 + 16?'
+csq_soln = 81 * 89 + 16
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 34 × 36 + 1?'
+csq_soln = 34 * 36 + 1
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 73 × 77 + 4?'
+csq_soln = 73 * 77 + 4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 62 × 68 + 9?'
+csq_soln = 62 * 68 + 9
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 32 × 38 + 9?'
+csq_soln = 32 * 38 + 9
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 18 × 24 + 9?'
+csq_soln = 18 * 24 + 9
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 61 × 69 + 16?'
+csq_soln = 61 * 69 + 16
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 43 × 47 + 4?'
+csq_soln = 43 * 47 + 4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 88 × 82 + 9?'
+csq_soln = 88 * 82 + 9
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 57 × 53 + 4?'
+csq_soln = 57 * 53 + 4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 38 × 28?'
+csq_soln = 38 * 28
+csq_check_function = lambda sub
+
+
+<question pythonliteral>
+csq_prompt = 'What is 62 × 68 − 16?'
+csq_soln = 62 * 68 - 16
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 36 × 26?'
+csq_soln = 36 * 26
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 83 × 87 − 21?'
+csq_soln = 83 * 87 - 21
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 23 × 27 + 4?'
+csq_soln = 23 * 27 + 4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 29 × 37?'
+csq_soln = 29 * 37
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 21 − 83 × 87?'
+csq_soln = 21 - 83 * 87
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 112 × 88?'
+csq_soln = 112 * 88
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 52 × 48 + 49 × 51?'
+csq_soln = 52 * 48 + 49 * 51
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 4.93 × 3.33?'
+csq_soln = 4.93 * 3.33
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 72 × 68 + 71 × 69?'
+csq_soln = 72 * 68 + 71 * 69
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 42 × 38 + 41 × 39?'
+csq_soln = 42 * 38 + 41 * 39
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 4.83 × 6.33?'
+csq_soln = 4.83 * 6.33
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 4000 + 322 × 318?'
+csq_soln = 4000 + 322 * 318
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 118 × 122 + 4?'
+csq_soln = 118 * 122 + 4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 5.13 × 7.93?'
+csq_soln = 5.13 * 7.93
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 34 × 36 × 34 × 36?'
+csq_soln = 34 * 36 * 34 * 36
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

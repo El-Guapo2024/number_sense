@@ -1,0 +1,1 @@
+cs_long_name = 'Sum of the Squares of Arbitrary Fibonacci Sequence' 

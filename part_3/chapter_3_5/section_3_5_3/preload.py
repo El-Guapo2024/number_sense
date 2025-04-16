@@ -1,0 +1,1 @@
+cs_long_name = 'Wilson\'s Theorem' 

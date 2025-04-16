@@ -1,0 +1,131 @@
+This trick involves multiplying by a clever version of 1. Let’s look at an example:
+
+$$
+\begin{align*}
+15 \times 78 &= \frac{2}{2} \times 15 \times 78  \\
+&= (15 \times 2) \times \frac{78}{2}  \\
+&= 30 \times 39 = 1170 \\
+\end{align*}
+$$
+
+So the procedure is you double one of the numbers and half the other one, then multiply. This trick is
+exceptionally helpful when multiplying by 15 or any two-digit number ending in 5. Another example is:
+
+$$
+35 \times 42 = 70 \times 21 = 1470
+$$
+
+It is also good whenever you are multiplying an even number in the teens by another number:y another number:
+
+$$
+\begin{align*}
+18 \times 52 =& 9 \times 104 = 936 \\
+\text{or}& \\
+14 \times 37 =& 7 \times 74 = 518
+\end{align*}
+$$
+
+The purpose of this trick is to save time on calculations. It is a lot easier to multiply a single-digit number
+than a two-digit number.
+
+<question pythonliteral>
+csq_prompt = 'What is 1.5 × 5.2?'
+csq_soln = 1.5 * 5.2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 4.8 × 15?'
+csq_soln = 4.8 * 15
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 64 × 1.5?'
+csq_soln = 64 * 1.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 15 × 48?'
+csq_soln = 15 * 48
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 14 × 203?'
+csq_soln = 14 * 203
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 14 × 312?'
+csq_soln = 14 * 312
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 24 × 35?'
+csq_soln = 24 * 35
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 312 × 14?'
+csq_soln = 312 * 14
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'A rectangle has a length of 2.4 and a width of 1.5. What is its area?'
+csq_soln = 2.4 * 1.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 18 × 112?'
+csq_soln = 18 * 112
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 27 × 14?'
+csq_soln = 27 * 14
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 21 × 15 × 14?'
+csq_soln = 21 * 15 * 14
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = '33.75 = 1.5 × x. What is the value of x?'
+csq_soln = 33.75 / 1.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 345 × 12?'
+csq_soln = 345 * 12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 1.2 × 1.25?'
+csq_soln = 1.2 * 1.25
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 24% of 44?'
+csq_soln = 0.24 * 44
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 14 × 25 + 12.5 × 28?'
+csq_soln = 14 * 25 + 12.5 * 28
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
