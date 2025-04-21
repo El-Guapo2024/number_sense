@@ -1,1 +1,92 @@
-Todo 
+# 1.3.1 Extending Foiling
+
+You can extend the method of FOILing to quickly multiply two three-digit numbers in the form `cba × dba`.
+
+The general objective is to treat the digits of `ba` as one number, so after foiling you would get:
+
+## General Method
+
+- **Ones/Tens:** `(ba)^2`
+- **Hundreds/Thousands:** `(c + d) × (ba)`
+- **Rest of Answer:** `c × d`
+
+---
+
+## Example 1
+
+**Problem:**  
+`412 × 612 =`
+
+- **Ones/Tens:** `(12)^2 = 144`
+- **Hundreds/Thousands:** `(4 + 6) × 12 + 1 = 121`
+- **Rest of Answer:** `4 × 6 + 1 = 25`
+
+**Answer:**  
+`252144`
+
+By treating the last two digits as a single entity, you reduce the three-digit multiplication to a two-digit problem. The last two digits need not be the same in the two numbers (though usually they are). Let's look at an example where they're different:
+
+---
+
+## Example 2
+
+**Problem:**  
+`211 × 808 =`
+
+- **Ones/Tens:** `08 × 11 = 88`
+- **Hundreds/Thousands:** `08 × 2 + 11 × 8 = 104`
+- **Rest of Answer:** `2 × 8 + 1 = 17`
+
+**Answer:**  
+`170488`
+
+---
+
+The method works best when the last two digits don’t exceed 20 (after that, the multiplication becomes cumbersome). Another good area where this approach is useful is **squaring three-digit numbers**:
+
+---
+
+## Example 3: Squaring
+
+**Problem:**  
+`606^2 = 606 × 606`
+
+- **Ones/Tens:** `06 × 06 = 36`
+- **Hundreds/Thousands:** `06 × 6 + 6 × 06 = 2 × 6 × 6 = 72`
+- **Rest of Answer:** `6 × 6 = 36`
+
+**Answer:**  
+`367236`
+
+To use this procedure for squaring, it helps to have squares of two-digit numbers memorized. For example:
+
+---
+
+## Example 4: Squaring
+
+**Problem:**  
+`431^2 = 431 × 431`
+
+- **Ones/Tens:** `31 × 31 = 961`
+- **Hundreds/Thousands:** `31 × 4 + 4 × 31 + 9 = 2 × 4 × 31 + 9 = 257`
+- **Rest of Answer:** `4 × 4 + 2 = 18`
+
+**Answer:**  
+`185761`
+
+If you don’t have `31^2` memorized, you would have to calculate it in order to do the first step in the process (which is time-consuming). However, if you have it memorized, you can save time.
+
+---
+
+## Practice Problems
+
+Here are some practice problems to help with understanding FOILing three-digit numbers:
+
+1. Multiply `324 × 524`
+2. Multiply `217 × 817`
+3. Square `512`
+4. Square `623`
+5. Multiply `405 × 605`
+
+---
+
