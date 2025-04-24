@@ -90,3 +90,54 @@ Here are some practice problems to help with understanding FOILing three-digit n
 
 ---
 
+<catsoop-section>Problem Set 1.3.1</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is <math>202^2</math>?<br/>'
+csq_soln = 202**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 406 × 406?<br/>'
+csq_soln = 406 * 406
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 503 × 503?<br/>'
+csq_soln = 503 * 503
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is <math>607^2</math>?<br/>'
+csq_soln = 607**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is <math>208^2</math>?<br/>'
+csq_soln = 208**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is <math>306^2</math>?<br/>'
+csq_soln = 306**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is 509 × 509?<br/>'
+csq_soln = 509 * 509
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is <math>804^2</math>?<br/>'
+csq_soln = 804**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<quest
