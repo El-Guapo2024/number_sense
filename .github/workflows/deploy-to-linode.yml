@@ -28,8 +28,8 @@ jobs:
           username: ${{ secrets.LINODE_SSH_USER }}
           key: ${{ secrets.LINODE_SSH_KEY }}
           script: |
-            echo "${{ secrets.LINODE_SUDO_PASSWORD }}" | sudo -S chown -R $USER:$USER /catsoop_courses/number_sense
-            echo "${{ secrets.LINODE_SUDO_PASSWORD }}" | sudo -S chmod -R u+rwX /catsoop_courses/number_sense
+            echo "${{ secrets.LINODE_SUDO_PASSWORD }}" | sudo -S chown -R $USER:$USER ./catsoop_courses/number_sense
+            echo "${{ secrets.LINODE_SUDO_PASSWORD }}" | sudo -S chmod -R u+rwX ./catsoop_courses/number_sense
 
       - name: Clear folder contents on Linode
         uses: appleboy/ssh-action@master
