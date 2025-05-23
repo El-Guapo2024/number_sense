@@ -1,1 +1,147 @@
-Todo 
+<catsoop-section>1.3.10 Combining Multiple Tricks</catsoop-section>
+
+In number sense competitions, problems often require combining multiple techniques we've learned. Being able to recognize which tricks to use and how to combine them is a crucial skill. Let's look at some examples:
+
+1. Combining Difference of Squares with Perfect Squares:
+$$
+\begin{align*}
+25^2 - 15^2 + 35^2 &= (25 + 15)(25 - 15) + 35^2 \\
+&= 40 \times 10 + 1225 \\
+&= 400 + 1225 \\
+&= \boxed{1625}
+\end{align*}
+$$
+
+2. Combining Sum of Squares with Factoring:
+$$
+\begin{align*}
+(3^2 + 4^2) \times (5^2 + 6^2) &= (9 + 16) \times (25 + 36) \\
+&= 25 \times 61 \\
+&= 25 \times (60 + 1) \\
+&= 1500 + 25 \\
+&= \boxed{1525}
+\end{align*}
+$$
+
+3. Combining Square Roots with Fractions:
+$$
+\begin{align*}
+\sqrt{\frac{16}{25}} \times \frac{25}{16} &= \frac{4}{5} \times \frac{25}{16} \\
+&= \frac{4 \times 25}{5 \times 16} \\
+&= \frac{100}{80} \\
+&= \boxed{\frac{5}{4}}
+\end{align*}
+$$
+
+4. Combining Multiple Techniques:
+$$
+\begin{align*}
+(13 \times \frac{13}{15})^2 - (11 \times \frac{11}{14})^2 &= (13 + (13-15) + \frac{(13-15)^2}{15})^2 - (11 + (11-14) + \frac{(11-14)^2}{14})^2 \\
+&= (13 - 2 + \frac{4}{15})^2 - (11 - 3 + \frac{9}{14})^2 \\
+&= (11\frac{4}{15})^2 - (8\frac{9}{14})^2 \\
+&= \boxed{45\frac{11}{210}}
+\end{align*}
+$$
+
+5. Complex Problem with Multiple Steps:
+$$
+\begin{align*}
+\sqrt{(15^2 + 20^2) \times (25^2 - 15^2)} &= \sqrt{(225 + 400) \times (25 + 15)(25 - 15)} \\
+&= \sqrt{625 \times 40 \times 10} \\
+&= \sqrt{625 \times 400} \\
+&= \sqrt{250000} \\
+&= \boxed{500}
+\end{align*}
+$$
+
+<catsoop-section>Problem Set 1.3.10</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is $(15^2 - 10^2) + (25^2 - 20^2)$?<br/>'
+csq_soln = 500
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(3^2 + 4^2) \times (6^2 + 8^2)$?<br/>'
+csq_soln = 1625
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{\frac{25}{36}} \times \frac{36}{25}$?<br/>'
+csq_soln = 1.2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(14 \times \frac{14}{17})^2 - (12 \times \frac{12}{15})^2$?<br/>'
+csq_soln = 4.471
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{(12^2 + 16^2) \times (20^2 - 12^2)}$?<br/>'
+csq_soln = 320
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(17^2 - 13^2) + (19^2 - 15^2)$?<br/>'
+csq_soln = 200
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(4^2 + 5^2) \times (7^2 + 8^2)$?<br/>'
+csq_soln = 2665
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{\frac{36}{49}} \times \frac{49}{36}$?<br/>'
+csq_soln = 1.167
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(15 \times \frac{15}{18})^2 - (13 \times \frac{13}{16})^2$?<br/>'
+csq_soln = 4.471
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{(9^2 + 12^2) \times (15^2 - 9^2)}$?<br/>'
+csq_soln = 180
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(21^2 - 17^2) + (23^2 - 19^2)$?<br/>'
+csq_soln = 280
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(5^2 + 6^2) \times (8^2 + 9^2)$?<br/>'
+csq_soln = 4141
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{\frac{49}{64}} \times \frac{64}{49}$?<br/>'
+csq_soln = 1.143
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(16 \times \frac{16}{19})^2 - (14 \times \frac{14}{17})^2$?<br/>'
+csq_soln = 4.471
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{(16^2 + 20^2) \times (24^2 - 16^2)}$?<br/>'
+csq_soln = 640
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 

@@ -1,1 +1,164 @@
-Todo 
+<catsoop-section>1.3.4 Sum of Squares - Factoring Method</catsoop-section>
+
+The factoring method for finding sums of squares is a powerful technique that can help us break down complex sums into more manageable parts. This method is particularly useful when dealing with sums that have patterns or can be expressed in terms of known formulas.
+
+1. Using Difference of Squares:
+$$
+\begin{align*}
+a^2 + b^2 &= (a + b)^2 - 2ab \\
+&= (a - b)^2 + 2ab
+\end{align*}
+$$
+
+For example:
+$$
+\begin{align*}
+7^2 + 5^2 &= (7 + 5)^2 - 2(7)(5) \\
+&= 12^2 - 70 \\
+&= 144 - 70 \\
+&= \boxed{74}
+\end{align*}
+$$
+
+2. Using Sum of Squares Formula:
+$$
+\begin{align*}
+a^2 + b^2 + c^2 &= (a + b + c)^2 - 2(ab + bc + ca)
+\end{align*}
+$$
+
+For example:
+$$
+\begin{align*}
+3^2 + 4^2 + 5^2 &= (3 + 4 + 5)^2 - 2(3 \times 4 + 4 \times 5 + 5 \times 3) \\
+&= 12^2 - 2(12 + 20 + 15) \\
+&= 144 - 2(47) \\
+&= 144 - 94 \\
+&= \boxed{50}
+\end{align*}
+$$
+
+3. Using Sum of Squares in Terms of Differences:
+$$
+\begin{align*}
+a^2 + b^2 + c^2 + d^2 &= (a + b + c + d)^2 - 2(ab + ac + ad + bc + bd + cd)
+\end{align*}
+$$
+
+For example:
+$$
+\begin{align*}
+2^2 + 3^2 + 4^2 + 5^2 &= (2 + 3 + 4 + 5)^2 - 2(2 \times 3 + 2 \times 4 + 2 \times 5 + 3 \times 4 + 3 \times 5 + 4 \times 5) \\
+&= 14^2 - 2(6 + 8 + 10 + 12 + 15 + 20) \\
+&= 196 - 2(71) \\
+&= 196 - 142 \\
+&= \boxed{54}
+\end{align*}
+$$
+
+4. Using Sum of Squares in Terms of Sum and Product:
+$$
+\begin{align*}
+a^2 + b^2 &= (a + b)^2 - 2ab \\
+a^2 + b^2 + c^2 &= (a + b + c)^2 - 2(ab + bc + ca) \\
+a^2 + b^2 + c^2 + d^2 &= (a + b + c + d)^2 - 2(ab + ac + ad + bc + bd + cd)
+\end{align*}
+$$
+
+<catsoop-section>Problem Set 1.3.4</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is $6^2 + 8^2$ using the factoring method?<br/>'
+csq_soln = 100
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $7^2 + 9^2$ using the factoring method?<br/>'
+csq_soln = 130
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $4^2 + 5^2 + 6^2$ using the factoring method?<br/>'
+csq_soln = 77
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $5^2 + 6^2 + 7^2$ using the factoring method?<br/>'
+csq_soln = 110
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $3^2 + 4^2 + 5^2 + 6^2$ using the factoring method?<br/>'
+csq_soln = 86
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $4^2 + 5^2 + 6^2 + 7^2$ using the factoring method?<br/>'
+csq_soln = 126
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $8^2 + 10^2$ using the factoring method?<br/>'
+csq_soln = 164
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $9^2 + 11^2$ using the factoring method?<br/>'
+csq_soln = 202
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $6^2 + 7^2 + 8^2$ using the factoring method?<br/>'
+csq_soln = 149
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $7^2 + 8^2 + 9^2$ using the factoring method?<br/>'
+csq_soln = 194
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $5^2 + 6^2 + 7^2 + 8^2$ using the factoring method?<br/>'
+csq_soln = 174
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $6^2 + 7^2 + 8^2 + 9^2$ using the factoring method?<br/>'
+csq_soln = 230
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $10^2 + 12^2$ using the factoring method?<br/>'
+csq_soln = 244
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $11^2 + 13^2$ using the factoring method?<br/>'
+csq_soln = 290
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $8^2 + 9^2 + 10^2$ using the factoring method?<br/>'
+csq_soln = 245
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $9^2 + 10^2 + 11^2$ using the factoring method?<br/>'
+csq_soln = 302
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 

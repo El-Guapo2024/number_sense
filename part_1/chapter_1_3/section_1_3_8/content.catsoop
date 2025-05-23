@@ -1,1 +1,142 @@
-Todo 
+<catsoop-section>1.3.8 Square Roots and Their Properties</catsoop-section>
+
+The square root of a number is a value that, when multiplied by itself, gives the original number. Understanding square roots and their properties is essential for mental math and problem-solving. Let's explore some key concepts:
+
+1. Perfect Square Roots:
+For perfect squares, we can find the exact square root:
+$$
+\begin{align*}
+\sqrt{1} &= 1 \\
+\sqrt{4} &= 2 \\
+\sqrt{9} &= 3 \\
+\sqrt{16} &= 4 \\
+\sqrt{25} &= 5
+\end{align*}
+$$
+
+2. Estimating Square Roots:
+For non-perfect squares, we can estimate the square root by finding the nearest perfect squares:
+$$
+\begin{align*}
+\sqrt{10} &\approx 3.16 \text{ (between } \sqrt{9} = 3 \text{ and } \sqrt{16} = 4\text{)} \\
+\sqrt{20} &\approx 4.47 \text{ (between } \sqrt{16} = 4 \text{ and } \sqrt{25} = 5\text{)} \\
+\sqrt{30} &\approx 5.48 \text{ (between } \sqrt{25} = 5 \text{ and } \sqrt{36} = 6\text{)}
+\end{align*}
+$$
+
+3. Properties of Square Roots:
+- \(\sqrt{a \times b} = \sqrt{a} \times \sqrt{b}\)
+- \(\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}\)
+- \(\sqrt{a^2} = |a|\)
+
+4. Simplifying Square Roots:
+We can simplify square roots by factoring out perfect squares:
+$$
+\begin{align*}
+\sqrt{8} &= \sqrt{4 \times 2} = 2\sqrt{2} \\
+\sqrt{12} &= \sqrt{4 \times 3} = 2\sqrt{3} \\
+\sqrt{18} &= \sqrt{9 \times 2} = 3\sqrt{2}
+\end{align*}
+$$
+
+5. Square Roots of Fractions:
+For fractions, we can take the square root of numerator and denominator separately:
+$$
+\begin{align*}
+\sqrt{\frac{4}{9}} &= \frac{\sqrt{4}}{\sqrt{9}} = \frac{2}{3} \\
+\sqrt{\frac{16}{25}} &= \frac{\sqrt{16}}{\sqrt{25}} = \frac{4}{5} \\
+\sqrt{\frac{36}{49}} &= \frac{\sqrt{36}}{\sqrt{49}} = \frac{6}{7}
+\end{align*}
+$$
+
+<catsoop-section>Problem Set 1.3.8</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{36}$?<br/>'
+csq_soln = 6
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{49}$?<br/>'
+csq_soln = 7
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{64}$?<br/>'
+csq_soln = 8
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{81}$?<br/>'
+csq_soln = 9
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{100}$?<br/>'
+csq_soln = 10
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{121}$?<br/>'
+csq_soln = 11
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{144}$?<br/>'
+csq_soln = 12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{169}$?<br/>'
+csq_soln = 13
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{\frac{1}{4}}$?<br/>'
+csq_soln = 0.5
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{\frac{1}{9}}$?<br/>'
+csq_soln = 0.333
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{\frac{4}{9}}$?<br/>'
+csq_soln = 0.667
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{\frac{9}{16}}$?<br/>'
+csq_soln = 0.75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{196}$?<br/>'
+csq_soln = 14
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{225}$?<br/>'
+csq_soln = 15
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{256}$?<br/>'
+csq_soln = 16
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 

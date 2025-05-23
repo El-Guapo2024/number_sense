@@ -1,1 +1,143 @@
-Todo 
+<catsoop-section>1.3.2 Factoring of Numerical Problems</catsoop-section>
+
+Factoring is a powerful technique that can help simplify complex numerical problems. By breaking down numbers into their prime factors, we can often find patterns and relationships that make calculations easier.
+
+Let's look at some examples:
+
+1. Finding the Greatest Common Factor (GCF):
+$$
+\begin{align*}
+\text{Find GCF of } 48 \text{ and } 72 &= \\
+48 &= 2^4 \times 3 \\
+72 &= 2^3 \times 3^2 \\
+\text{GCF} &= 2^3 \times 3 = \boxed{24}
+\end{align*}
+$$
+
+2. Finding the Least Common Multiple (LCM):
+$$
+\begin{align*}
+\text{Find LCM of } 48 \text{ and } 72 &= \\
+48 &= 2^4 \times 3 \\
+72 &= 2^3 \times 3^2 \\
+\text{LCM} &= 2^4 \times 3^2 = \boxed{144}
+\end{align*}
+$$
+
+3. Simplifying Fractions:
+$$
+\begin{align*}
+\frac{48}{72} &= \frac{2^4 \times 3}{2^3 \times 3^2} \\
+&= \frac{2}{3}
+\end{align*}
+$$
+
+4. Finding Square Roots:
+$$
+\begin{align*}
+\sqrt{48} &= \sqrt{2^4 \times 3} \\
+&= 2^2 \times \sqrt{3} \\
+&= 4\sqrt{3}
+\end{align*}
+$$
+
+5. Finding Cube Roots:
+$$
+\begin{align*}
+\sqrt[3]{72} &= \sqrt[3]{2^3 \times 3^2} \\
+&= 2 \times \sqrt[3]{3^2} \\
+&= 2\sqrt[3]{9}
+\end{align*}
+$$
+
+<catsoop-section>Problem Set 1.3.2</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is the GCF of 36 and 48?<br/>'
+csq_soln = 12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is the LCM of 36 and 48?<br/>'
+csq_soln = 144
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'Simplify the fraction $\frac{36}{48}$ to lowest terms.<br/>'
+csq_soln = 0.75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{36}$?<br/>'
+csq_soln = 6
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{48}$ in simplified radical form? (Enter as a decimal)<br/>'
+csq_soln = 6.928
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is the GCF of 54 and 72?<br/>'
+csq_soln = 18
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is the LCM of 54 and 72?<br/>'
+csq_soln = 216
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'Simplify the fraction $\frac{54}{72}$ to lowest terms.<br/>'
+csq_soln = 0.75
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{54}$ in simplified radical form? (Enter as a decimal)<br/>'
+csq_soln = 7.348
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt[3]{72}$ in simplified radical form? (Enter as a decimal)<br/>'
+csq_soln = 4.160
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is the GCF of 60 and 84?<br/>'
+csq_soln = 12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is the LCM of 60 and 84?<br/>'
+csq_soln = 420
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'Simplify the fraction $\frac{60}{84}$ to lowest terms.<br/>'
+csq_soln = 0.714
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt{60}$ in simplified radical form? (Enter as a decimal)<br/>'
+csq_soln = 7.746
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $\sqrt[3]{60}$ in simplified radical form? (Enter as a decimal)<br/>'
+csq_soln = 3.915
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 

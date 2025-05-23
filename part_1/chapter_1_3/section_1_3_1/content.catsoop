@@ -1,143 +1,183 @@
-# 1.3.1 Extending Foiling
+<catsoop-section>1.3.1 Extending Foiling</catsoop-section>
 
-You can extend the method of FOILing to quickly multiply two three-digit numbers in the form `cba × dba`.
+You can extend the method of FOILing to quickly multiply two three-digit numbers in the form $cba \times dba$. The general objective is to treat the digits of $ba$ as one number, so after foiling you would get:
 
-The general objective is to treat the digits of `ba` as one number, so after foiling you would get:
+$$
+\begin{align*}
+\text{Ones/Tens:} &\quad (ba)^2 \\
+\text{Hundreds/Thousands:} &\quad (c + d) \times (ba) \\
+\text{Rest of Answer:} &\quad c \times d
+\end{align*}
+$$
 
-## General Method
+Let's look at some examples:
 
-- **Ones/Tens:** `(ba)^2`
-- **Hundreds/Thousands:** `(c + d) × (ba)`
-- **Rest of Answer:** `c × d`
-
----
-
-## Example 1
-
-**Problem:**  
-`412 × 612 =`
-
-- **Ones/Tens:** `(12)^2 = 144`
-- **Hundreds/Thousands:** `(4 + 6) × 12 + 1 = 121`
-- **Rest of Answer:** `4 × 6 + 1 = 25`
-
-**Answer:**  
-`252144`
+$$
+\begin{align*}
+412 \times 612 &= \\
+\text{Ones/Tens:} &\quad (12)^2 = 144 \\
+\text{Hundreds/Thousands:} &\quad (4 + 6) \times 12 + 1 = 121 \\
+\text{Rest of Answer:} &\quad 4 \times 6 + 1 = 25 \\
+\text{Answer:} &\quad \boxed{252144}
+\end{align*}
+$$
 
 By treating the last two digits as a single entity, you reduce the three-digit multiplication to a two-digit problem. The last two digits need not be the same in the two numbers (though usually they are). Let's look at an example where they're different:
 
----
+$$
+\begin{align*}
+211 \times 808 &= \\
+\text{Ones/Tens:} &\quad 08 \times 11 = 88 \\
+\text{Hundreds/Thousands:} &\quad 08 \times 2 + 11 \times 8 = 104 \\
+\text{Rest of Answer:} &\quad 2 \times 8 + 1 = 17 \\
+\text{Answer:} &\quad \boxed{170488}
+\end{align*}
+$$
 
-## Example 2
+The method works best when the last two digits don't exceed 20 (after that, the multiplication becomes cumbersome). Another good area where this approach is useful is squaring three-digit numbers:
 
-**Problem:**  
-`211 × 808 =`
-
-- **Ones/Tens:** `08 × 11 = 88`
-- **Hundreds/Thousands:** `08 × 2 + 11 × 8 = 104`
-- **Rest of Answer:** `2 × 8 + 1 = 17`
-
-**Answer:**  
-`170488`
-
----
-
-The method works best when the last two digits don’t exceed 20 (after that, the multiplication becomes cumbersome). Another good area where this approach is useful is **squaring three-digit numbers**:
-
----
-
-## Example 3: Squaring
-
-**Problem:**  
-`606^2 = 606 × 606`
-
-- **Ones/Tens:** `06 × 06 = 36`
-- **Hundreds/Thousands:** `06 × 6 + 6 × 06 = 2 × 6 × 6 = 72`
-- **Rest of Answer:** `6 × 6 = 36`
-
-**Answer:**  
-`367236`
+$$
+\begin{align*}
+606^2 = 606 \times 606 &= \\
+\text{Ones/Tens:} &\quad 06 \times 06 = 36 \\
+\text{Hundreds/Thousands:} &\quad 06 \times 6 + 6 \times 06 = 2 \times 6 \times 6 = 72 \\
+\text{Rest of Answer:} &\quad 6 \times 6 = 36 \\
+\text{Answer:} &\quad \boxed{367236}
+\end{align*}
+$$
 
 To use this procedure for squaring, it helps to have squares of two-digit numbers memorized. For example:
 
----
+$$
+\begin{align*}
+431^2 = 431 \times 431 &= \\
+\text{Ones/Tens:} &\quad 31 \times 31 = 961 \\
+\text{Hundreds/Thousands:} &\quad 31 \times 4 + 4 \times 31 + 9 = 2 \times 4 \times 31 + 9 = 257 \\
+\text{Rest of Answer:} &\quad 4 \times 4 + 2 = 18 \\
+\text{Answer:} &\quad \boxed{185761}
+\end{align*}
+$$
 
-## Example 4: Squaring
-
-**Problem:**  
-`431^2 = 431 × 431`
-
-- **Ones/Tens:** `31 × 31 = 961`
-- **Hundreds/Thousands:** `31 × 4 + 4 × 31 + 9 = 2 × 4 × 31 + 9 = 257`
-- **Rest of Answer:** `4 × 4 + 2 = 18`
-
-**Answer:**  
-`185761`
-
-If you don’t have `31^2` memorized, you would have to calculate it in order to do the first step in the process (which is time-consuming). However, if you have it memorized, you can save time.
-
----
-
-## Practice Problems
-
-Here are some practice problems to help with understanding FOILing three-digit numbers:
-
-1. Multiply `324 × 524`
-2. Multiply `217 × 817`
-3. Square `512`
-4. Square `623`
-5. Multiply `405 × 605`
-
----
+If you don't have $31^2$ memorized, you would have to calculate it in order to do the first step in the process (which is time-consuming). However, if you have it memorized, you can save time.
 
 <catsoop-section>Problem Set 1.3.1</catsoop-section>
 
 <question pythonliteral>
-csq_prompt = 'What is <math>202^2</math>?<br/>'
+csq_prompt = 'What is $202^2$?<br/>'
 csq_soln = 202**2
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
 <question pythonliteral>
-csq_prompt = 'What is 406 × 406?<br/>'
+csq_prompt = 'What is $406 \times 406$?<br/>'
 csq_soln = 406 * 406
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
 <question pythonliteral>
-csq_prompt = 'What is 503 × 503?<br/>'
+csq_prompt = 'What is $503 \times 503$?<br/>'
 csq_soln = 503 * 503
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
 <question pythonliteral>
-csq_prompt = 'What is <math>607^2</math>?<br/>'
+csq_prompt = 'What is $607^2$?<br/>'
 csq_soln = 607**2
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
 <question pythonliteral>
-csq_prompt = 'What is <math>208^2</math>?<br/>'
+csq_prompt = 'What is $208^2$?<br/>'
 csq_soln = 208**2
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
 <question pythonliteral>
-csq_prompt = 'What is <math>306^2</math>?<br/>'
+csq_prompt = 'What is $306^2$?<br/>'
 csq_soln = 306**2
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
 <question pythonliteral>
-csq_prompt = 'What is 509 × 509?<br/>'
+csq_prompt = 'What is $509 \times 509$?<br/>'
 csq_soln = 509 * 509
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
 <question pythonliteral>
-csq_prompt = 'What is <math>804^2</math>?<br/>'
+csq_prompt = 'What is $804^2$?<br/>'
 csq_soln = 804**2
 csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
 </question>
 
-<quest
+<question pythonliteral>
+csq_prompt = 'What is $324 \times 524$?<br/>'
+csq_soln = 324 * 524
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $217 \times 817$?<br/>'
+csq_soln = 217 * 817
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $512^2$?<br/>'
+csq_soln = 512**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $623^2$?<br/>'
+csq_soln = 623**2
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $405 \times 605$?<br/>'
+csq_soln = 405 * 605
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $311 \times 811$?<br/>'
+csq_soln = 311 * 811
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $422 \times 622$?<br/>'
+csq_soln = 422 * 622
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $533 \times 533$?<br/>'
+csq_soln = 533 * 533
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $644 \times 644$?<br/>'
+csq_soln = 644 * 644
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $755 \times 755$?<br/>'
+csq_soln = 755 * 755
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $866 \times 866$?<br/>'
+csq_soln = 866 * 866
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $977 \times 977$?<br/>'
+csq_soln = 977 * 977
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>

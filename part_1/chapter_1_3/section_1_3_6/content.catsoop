@@ -1,1 +1,154 @@
-Todo 
+<catsoop-section>1.3.6 Difference of Squares</catsoop-section>
+
+The difference of squares is a powerful algebraic identity that can be used to simplify calculations and solve problems quickly. The basic formula is:
+
+$$
+\begin{align*}
+a^2 - b^2 &= (a + b)(a - b)
+\end{align*}
+$$
+
+This identity has many applications in number sense problems. Let's look at some examples:
+
+1. Basic Difference of Squares:
+$$
+\begin{align*}
+7^2 - 3^2 &= (7 + 3)(7 - 3) \\
+&= 10 \times 4 \\
+&= \boxed{40}
+\end{align*}
+$$
+
+2. Difference of Squares with Larger Numbers:
+$$
+\begin{align*}
+25^2 - 15^2 &= (25 + 15)(25 - 15) \\
+&= 40 \times 10 \\
+&= \boxed{400}
+\end{align*}
+$$
+
+3. Difference of Squares with Decimals:
+$$
+\begin{align*}
+1.5^2 - 0.5^2 &= (1.5 + 0.5)(1.5 - 0.5) \\
+&= 2 \times 1 \\
+&= \boxed{2}
+\end{align*}
+$$
+
+4. Difference of Squares with Fractions:
+$$
+\begin{align*}
+(\frac{5}{2})^2 - (\frac{3}{2})^2 &= (\frac{5}{2} + \frac{3}{2})(\frac{5}{2} - \frac{3}{2}) \\
+&= 4 \times 1 \\
+&= \boxed{4}
+\end{align*}
+$$
+
+5. Difference of Squares with Variables:
+$$
+\begin{align*}
+(x + 2)^2 - (x - 2)^2 &= ((x + 2) + (x - 2))((x + 2) - (x - 2)) \\
+&= (2x)(4) \\
+&= \boxed{8x}
+\end{align*}
+$$
+
+<catsoop-section>Problem Set 1.3.6</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is $8^2 - 4^2$?<br/>'
+csq_soln = 48
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $12^2 - 8^2$?<br/>'
+csq_soln = 80
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $15^2 - 10^2$?<br/>'
+csq_soln = 125
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $20^2 - 15^2$?<br/>'
+csq_soln = 175
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $2.5^2 - 1.5^2$?<br/>'
+csq_soln = 4
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $3.5^2 - 2.5^2$?<br/>'
+csq_soln = 6
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(\frac{7}{2})^2 - (\frac{5}{2})^2$?<br/>'
+csq_soln = 6
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(\frac{9}{2})^2 - (\frac{7}{2})^2$?<br/>'
+csq_soln = 8
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(x + 3)^2 - (x - 3)^2$?<br/>'
+csq_soln = 12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(x + 4)^2 - (x - 4)^2$?<br/>'
+csq_soln = 16
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $30^2 - 20^2$?<br/>'
+csq_soln = 500
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $40^2 - 30^2$?<br/>'
+csq_soln = 700
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $4.5^2 - 3.5^2$?<br/>'
+csq_soln = 8
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $5.5^2 - 4.5^2$?<br/>'
+csq_soln = 10
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(\frac{11}{2})^2 - (\frac{9}{2})^2$?<br/>'
+csq_soln = 10
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $(\frac{13}{2})^2 - (\frac{11}{2})^2$?<br/>'
+csq_soln = 12
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 

@@ -1,1 +1,162 @@
-Todo 
+<catsoop-section>1.3.3 Sum of Consecutive Squares</catsoop-section>
+
+The sum of consecutive squares is a useful pattern to recognize in number sense problems. There are several formulas and techniques that can help us calculate these sums quickly.
+
+1. Sum of First n Natural Numbers:
+$$
+\begin{align*}
+1^2 + 2^2 + 3^2 + \cdots + n^2 &= \frac{n(n+1)(2n+1)}{6}
+\end{align*}
+$$
+
+For example:
+$$
+\begin{align*}
+1^2 + 2^2 + 3^2 + 4^2 + 5^2 &= \frac{5(6)(11)}{6} \\
+&= \frac{330}{6} \\
+&= \boxed{55}
+\end{align*}
+$$
+
+2. Sum of Consecutive Even Squares:
+$$
+\begin{align*}
+2^2 + 4^2 + 6^2 + \cdots + (2n)^2 &= 4(1^2 + 2^2 + 3^2 + \cdots + n^2) \\
+&= \frac{2n(n+1)(2n+1)}{3}
+\end{align*}
+$$
+
+For example:
+$$
+\begin{align*}
+2^2 + 4^2 + 6^2 + 8^2 + 10^2 &= 4(1^2 + 2^2 + 3^2 + 4^2 + 5^2) \\
+&= 4(55) \\
+&= \boxed{220}
+\end{align*}
+$$
+
+3. Sum of Consecutive Odd Squares:
+$$
+\begin{align*}
+1^2 + 3^2 + 5^2 + \cdots + (2n-1)^2 &= \frac{n(2n-1)(2n+1)}{3}
+\end{align*}
+$$
+
+For example:
+$$
+\begin{align*}
+1^2 + 3^2 + 5^2 + 7^2 + 9^2 &= \frac{5(9)(11)}{3} \\
+&= \frac{495}{3} \\
+&= \boxed{165}
+\end{align*}
+$$
+
+4. Sum of Squares in an Arithmetic Sequence:
+If we have an arithmetic sequence with first term $a$ and common difference $d$, then:
+$$
+\begin{align*}
+a^2 + (a+d)^2 + (a+2d)^2 + \cdots + (a+(n-1)d)^2 &= n(a^2 + (n-1)ad + \frac{(n-1)(2n-1)d^2}{6})
+\end{align*}
+$$
+
+For example, with $a=3$ and $d=2$:
+$$
+\begin{align*}
+3^2 + 5^2 + 7^2 + 9^2 &= 4(3^2 + 3(2) + \frac{3(7)(4)}{6}) \\
+&= 4(9 + 6 + 14) \\
+&= 4(29) \\
+&= \boxed{116}
+\end{align*}
+$$
+
+<catsoop-section>Problem Set 1.3.3</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is $1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2$?<br/>'
+csq_soln = 91
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $2^2 + 4^2 + 6^2 + 8^2 + 10^2 + 12^2$?<br/>'
+csq_soln = 364
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $1^2 + 3^2 + 5^2 + 7^2 + 9^2 + 11^2$?<br/>'
+csq_soln = 286
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $3^2 + 5^2 + 7^2 + 9^2 + 11^2$?<br/>'
+csq_soln = 285
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $4^2 + 6^2 + 8^2 + 10^2 + 12^2$?<br/>'
+csq_soln = 360
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2$?<br/>'
+csq_soln = 140
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $2^2 + 4^2 + 6^2 + 8^2 + 10^2 + 12^2 + 14^2$?<br/>'
+csq_soln = 560
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $1^2 + 3^2 + 5^2 + 7^2 + 9^2 + 11^2 + 13^2$?<br/>'
+csq_soln = 455
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $5^2 + 7^2 + 9^2 + 11^2 + 13^2$?<br/>'
+csq_soln = 445
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $6^2 + 8^2 + 10^2 + 12^2 + 14^2$?<br/>'
+csq_soln = 540
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2 + 8^2$?<br/>'
+csq_soln = 204
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $2^2 + 4^2 + 6^2 + 8^2 + 10^2 + 12^2 + 14^2 + 16^2$?<br/>'
+csq_soln = 816
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $1^2 + 3^2 + 5^2 + 7^2 + 9^2 + 11^2 + 13^2 + 15^2$?<br/>'
+csq_soln = 680
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $7^2 + 9^2 + 11^2 + 13^2 + 15^2$?<br/>'
+csq_soln = 645
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $8^2 + 10^2 + 12^2 + 14^2 + 16^2$?<br/>'
+csq_soln = 760
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 

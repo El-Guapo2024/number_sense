@@ -1,1 +1,183 @@
-Todo 
+<catsoop-section>1.3.9 Multiplication Trick for a × a/b</catsoop-section>
+
+When multiplying an integer by a fraction in the form \(a \times \frac{a}{b}\), there is a useful trick that can help us calculate the result quickly. The formula is:
+
+$$
+\begin{align*}
+a \times \frac{a}{b} &= [a + (a - b)] + \frac{(a - b)^2}{b}
+\end{align*}
+$$
+
+Let's look at some examples:
+
+1. Multiplying by a fraction less than 1:
+$$
+\begin{align*}
+11 \times \frac{11}{13} &= 11 + (11 - 13) + \frac{(11 - 13)^2}{13} \\
+&= 11 - 2 + \frac{4}{13} \\
+&= 9\frac{4}{13}
+\end{align*}
+$$
+
+2. Multiplying by a fraction greater than 1:
+$$
+\begin{align*}
+13 \times \frac{13}{12} &= 13 + (13 - 12) + \frac{(13 - 12)^2}{12} \\
+&= 13 + 1 + \frac{1}{12} \\
+&= 14\frac{1}{12}
+\end{align*}
+$$
+
+Note: When multiplying by a fraction less than 1, we subtract the difference between numerator and denominator, while when multiplying by a fraction greater than 1, we add the difference.
+
+Important Exception:
+There are cases where using this trick becomes cumbersome, particularly when dealing with larger numbers or when additional operations are involved. In such cases, it's often easier to convert to improper fractions. For example:
+
+$$
+\begin{align*}
+7 \times \frac{7}{15} - 7 &= \frac{7 \times 7}{15} - \frac{7 \times 15}{15} \\
+&= \frac{7 \times (7 - 15)}{15} \\
+&= \frac{-56}{15} \\
+&= -3\frac{11}{15}
+\end{align*}
+$$
+
+<catsoop-section>Problem Set 1.3.9</catsoop-section>
+
+<question pythonliteral>
+csq_prompt = 'What is $11 \times \frac{11}{14}$?<br/>'
+csq_soln = 8.643
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $22 \times \frac{22}{25}$?<br/>'
+csq_soln = 19.36
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $19 \times \frac{19}{23}$?<br/>'
+csq_soln = 15.696
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $27 \times \frac{27}{32}$?<br/>'
+csq_soln = 22.781
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $16 \times \frac{16}{19}$?<br/>'
+csq_soln = 13.474
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $29 \times \frac{29}{34}$?<br/>'
+csq_soln = 24.735
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $31 \times \frac{31}{34}$?<br/>'
+csq_soln = 28.265
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $14 \times \frac{14}{17} - 3$?<br/>'
+csq_soln = 8.529
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $11 \times \frac{11}{14} + 3$?<br/>'
+csq_soln = 11.643
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $13 \times \frac{13}{16} + 13$?<br/>'
+csq_soln = 23.563
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $13 \times \frac{13}{17} + 4$?<br/>'
+csq_soln = 13.941
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $13 \times \frac{13}{14} - 13$?<br/>'
+csq_soln = -1.071
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $17 \times \frac{17}{18} - 17$?<br/>'
+csq_soln = -0.944
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $22 \times \frac{22}{25} - 22$?<br/>'
+csq_soln = -2.64
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $14 \times \frac{14}{17} - 14$?<br/>'
+csq_soln = -2.471
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $17 \times 1\frac{17}{21}$?<br/>'
+csq_soln = 30.857
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $13 \times \frac{13}{16} - 13$?<br/>'
+csq_soln = -2.437
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $11 \times \frac{11}{12} - 11$?<br/>'
+csq_soln = -0.917
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $7 \times \frac{7}{15} - 7$?<br/>'
+csq_soln = -3.733
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $14 \times \frac{14}{17} - 14$?<br/>'
+csq_soln = -2.471
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $15 \times \frac{15}{17} - 15$?<br/>'
+csq_soln = -1.765
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $35 \times 1\frac{35}{38}$?<br/>'
+csq_soln = 67.237
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question>
+
+<question pythonliteral>
+csq_prompt = 'What is $13 \times \frac{13}{15} - 13$?<br/>'
+csq_soln = -1.733
+csq_check_function = lambda sub, sol: abs(sub - sol) <= 1e-3
+</question> 
