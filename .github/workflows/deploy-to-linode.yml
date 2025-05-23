@@ -21,6 +21,16 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.LINODE_IP }} >> ~/.ssh/known_hosts
 
+      - name: Clear folder contents on Linode
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.LINODE_IP }}
+          username: ${{ secrets.LINODE_SSH_USER }}
+          key: ${{ secrets.LINODE_SSH_KEY }}
+          script: |
+            rm -rf /catsoop_course/number_sense/*
+            rm -rf /catsoop_course/number_sense/.* 2>/dev/null || true
+
       - name: Copy entire repo to Linode
         uses: appleboy/scp-action@master
         with:
@@ -29,6 +39,7 @@ jobs:
           key: ${{ secrets.LINODE_SSH_KEY }}
           source: "."
           target: "/catsoop_course/number_sense"
-          rm: true
+          rm: false
           strip_components: 0
           debug: true
+
