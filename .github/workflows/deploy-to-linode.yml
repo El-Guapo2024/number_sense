@@ -20,17 +20,16 @@ jobs:
           echo "${{ secrets.LINODE_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.LINODE_IP }} >> ~/.ssh/known_hosts
-          
-      - name: Ensure correct permissions on target folder
+
+      - name: Set folder ownership
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.LINODE_IP }}
           username: ${{ secrets.LINODE_SSH_USER }}
           key: ${{ secrets.LINODE_SSH_KEY }}
           script: |
-            sudo chown -R $USER:$USER /catsoop_courses/number_sense
-            sudo chmod -R u+rwX /catsoop_courses/number_sense
-
+            echo "${{ secrets.LINODE_SUDO_PASSWORD }}" | sudo -S chown -R $USER:$USER /catsoop_courses/number_sense
+            echo "${{ secrets.LINODE_SUDO_PASSWORD }}" | sudo -S chmod -R u+rwX /catsoop_courses/number_sense
 
       - name: Clear folder contents on Linode
         uses: appleboy/ssh-action@master
